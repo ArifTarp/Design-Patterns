@@ -11,7 +11,7 @@ namespace Facade
         static void Main(string[] args)
         {
             // normally injected with ioc
-            CustomerManager customerManager = new CustomerManager(
+            NewCustomerManager customerManager = new NewCustomerManager(
                 new CrossCuttingConcernsFacade(new Logging(),new Caching(),new Validation())
                 );
 
@@ -24,10 +24,11 @@ namespace Facade
     }
 
     // CustomerManager after use of facade design pattern
-    class CustomerManager
+    class NewCustomerManager
     {
         private CrossCuttingConcernsFacade _crossCuttingConcernsFacade;
-        public CustomerManager(CrossCuttingConcernsFacade crossCuttingConcernsFacade)
+
+        public NewCustomerManager(CrossCuttingConcernsFacade crossCuttingConcernsFacade)
         {
             _crossCuttingConcernsFacade = crossCuttingConcernsFacade;
         }
@@ -61,15 +62,13 @@ namespace Facade
     }
 
     // CustomerManager before use of facade design pattern
-
-    /*
-    class CustomerManager
+    class OldCustomerManager
     {
         private ILogging _logging;
         private ICaching _caching;
         private IValidate _validate;
 
-        public CustomerManager(ILogging logging, ICaching caching, IValidate validate)
+        public OldCustomerManager(ILogging logging, ICaching caching, IValidate validate)
         {
             _logging = logging;
             _caching = caching;
@@ -88,7 +87,7 @@ namespace Facade
         {
             _validate.Validate();
         }
-    }*/
+    }
 
     // classes
     class Logging : ILogging
