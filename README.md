@@ -19,7 +19,7 @@ Design Patterns | Purpose | Sample in real life
 *Memento* | Lets we save and restore previous state of an object. | We can define a memento list and use it for undo operations in text editor.
 *Template Method* | Lets we have skeleton of algorithm in superclass. It aims to override required steps without breaking this skeleton in lower classes. | Lets we have a system that receives data from a source, sends data as a message and logs message. Used source, message sending method and logging methods in these stages may be different or some stages may be same. With this design pattern, we can prevent duplicate codes and proceed according to a certain layout.
 *State* | Allows behavior to change according to the state of the object. | We can give an example of a video player.
-
+*Mediator* | Aims to reduce dependency of tightly coupled objects. | In a form application, many components such as buttons, checkboxes, radio buttons, textboxes are dependent with each other. For example, when 1.checkbox is selected, it is bound by many conditions such as button will be hidden. Components interacting with others from one common place instead of each other will reduce dependency and increase developability.
 
 
 
