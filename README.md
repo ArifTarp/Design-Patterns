@@ -21,5 +21,5 @@ Design Patterns | Purpose | Sample in real life
 *State* | Allows behavior to change according to the state of the object. | We can give an example of a video player.
 *Mediator* | Aims to reduce dependency of tightly coupled objects. | In a form application, many components such as buttons, checkboxes, radio buttons, textboxes are dependent with each other. For example, when 1.checkbox is selected, it is bound by many conditions such as button will be hidden. Components interacting with others from one common place instead of each other will reduce dependency and increase developability.
 *Visitor* | Aims to separate operations of objects from themselves. | Suppose we have a User class. The User class has many operations such as sending messages, updating. We can create a separate Visitor class, write accept method on our  User class, and send itself to the Visitor class received as a parameter in this method. Thus, when the existing operations of the User change or when new operations are added, we will only add it to the Visitor class without changing the User class.
-
+*Dependency Injection* | Aims to reduce dependency using abstract and IoC. | Using between layers in layered architecture.
 
